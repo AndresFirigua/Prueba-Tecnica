@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner lectura = new Scanner(System.in);
-        int s = 6;
+        int s = 5;
         int n, tamaño, b = 0,cant=0,cifras=0;
         int digitos[] = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 100000000};
         int numeros[] = new int[9];

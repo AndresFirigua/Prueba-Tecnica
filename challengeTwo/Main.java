@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int nCondicion=6 , nCantidad;
+        int nCondicion=5, nCantidad;
         int nCondicion2=nCondicion*10+nCondicion;
         boolean primero = true;
 
