@@ -6,24 +6,23 @@ public class Main {
     public static void main(String[] args) {
         Scanner lectura = new Scanner(System.in);
         int s = 6;
-        int resultado[], n, tamaño, b = 0,cant=0,cifras=0;
+        int n, tamaño, b = 0,cant=0,cifras=0;
         int digitos[] = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000, 100000000, 100000000};
         int numeros[] = new int[9];
+        boolean primero = true;
         
         //Definición del tamaño del arreglo
-        System.out.println("Ingrese el número de elementos del arreglo");
+        System.out.println("Ingrese el número de elementos del arreglo: ");
         tamaño = lectura.nextInt();
         int[] nUsuario = new int[tamaño];
         
         //Entrada de datos
         System.out.println("A continuación se ingresarán los valores del arreglo");
         for (int i = 0; i < tamaño; i++) {
-            System.out.print("Ingrese el valor " + i + ":");
+            System.out.print("Ingrese el valor " + i + ": ");
             nUsuario[i] = lectura.nextInt();
             System.out.println("");
         }
-        resultado = new int[nUsuario.length];
-        int res = nUsuario.length-1;
 
         //Eliminación de dígitos
         for (int j = 0; j < tamaño; j++) {
@@ -58,7 +57,11 @@ public class Main {
         System.out.print("[");
         for (int i = tamaño - 1; i >= 0; i--) {
             if(nUsuario[i]!=-1){
-                System.out.print(nUsuario[i] + " ");
+                if (!primero) {
+                    System.out.print(", ");
+                }
+                System.out.print(nUsuario[i]);
+                primero = false;
             }
         }
         System.out.print("]");
